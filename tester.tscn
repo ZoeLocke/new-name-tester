@@ -41,12 +41,14 @@ size_flags_vertical = 10
 
 [node name="Restart" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+tooltip_text = "Go back to the start screen to try a new name and/or pronoun set."
 theme_override_font_sizes/font_size = 46
 text = "Restart"
 
 [node name="Next" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
+tooltip_text = "See your name and pronoun set in a different sentance."
 theme_override_font_sizes/font_size = 46
 text = "Next"
 
