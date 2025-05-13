@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://81mqkek6asex"]
+[gd_scene load_steps=3 format=3 uid="uid://81mqkek6asex"]
 
 [ext_resource type="Script" uid="uid://ccyg7wsdblu0p" path="res://tester.gd" id="1_qxhol"]
+[ext_resource type="Theme" uid="uid://bahr6abqelndb" path="res://theme.tres" id="2_cdomt"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -28,11 +29,11 @@ alignment = 1
 custom_minimum_size = Vector2(1388, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
+size_flags_vertical = 10
 theme_override_font_sizes/font_size = 62
 text = "Holding text"
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -42,6 +43,7 @@ size_flags_vertical = 10
 [node name="Restart" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Go back to the start screen to try a new name and/or pronoun set."
+theme = ExtResource("2_cdomt")
 theme_override_font_sizes/font_size = 46
 text = "Restart"
 
@@ -49,6 +51,7 @@ text = "Restart"
 layout_mode = 2
 size_flags_horizontal = 10
 tooltip_text = "See your name and pronoun set in a different sentance."
+theme = ExtResource("2_cdomt")
 theme_override_font_sizes/font_size = 46
 text = "Next"
 

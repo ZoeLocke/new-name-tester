@@ -31,3 +31,4 @@ func _on_next_button_up() -> void:
 	else:
 		string_it = 0
 	$VBoxContainer/Label.text = strings[string_it]
+	$VBoxContainer/HBoxContainer/Next.release_focus()

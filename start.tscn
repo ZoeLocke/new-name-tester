@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://523fkw2e3vsk"]
+[gd_scene load_steps=3 format=3 uid="uid://523fkw2e3vsk"]
 
 [ext_resource type="Script" uid="uid://1p3ele1ciuch" path="res://start.gd" id="1_ots34"]
+[ext_resource type="Theme" uid="uid://bahr6abqelndb" path="res://theme.tres" id="2_qn1rc"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -29,6 +30,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.839216, 0.356863, 1)
 theme_override_font_sizes/font_size = 64
 text = "Welcome to New Name Tester"
 horizontal_alignment = 1
@@ -49,6 +51,7 @@ size_flags_vertical = 10
 layout_mode = 2
 size_flags_vertical = 6
 tooltip_text = "Enter the name you would like to try on here."
+theme = ExtResource("2_qn1rc")
 theme_override_font_sizes/font_size = 46
 placeholder_text = "Enter your name here"
 
@@ -60,7 +63,7 @@ text = "Select your pronouns below"
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "Select the pronoun set you would like to try on from this list."
-theme_override_font_sizes/font_size = 46
+theme = ExtResource("2_qn1rc")
 item_count = 10
 popup/item_0/text = "They / Them"
 popup/item_0/id = 0
@@ -87,6 +90,7 @@ popup/item_9/id = 9
 layout_mode = 2
 size_flags_vertical = 10
 tooltip_text = "Click here (once name and pronouns are selected) to go to the testing page."
+theme = ExtResource("2_qn1rc")
 theme_override_font_sizes/font_size = 46
 text = "Try it out!"
 
