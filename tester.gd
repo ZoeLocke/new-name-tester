@@ -19,6 +19,7 @@ var strings = [
 var string_it = 0
 func _ready():
 	$VBoxContainer/Label.text = strings[string_it]
+	$VBoxContainer/HBoxContainer/Next.grab_focus()
 
 
 func _on_restart_button_up() -> void:
@@ -31,4 +32,3 @@ func _on_next_button_up() -> void:
 	else:
 		string_it = 0
 	$VBoxContainer/Label.text = strings[string_it]
-	$VBoxContainer/HBoxContainer/Next.release_focus()

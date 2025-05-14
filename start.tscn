@@ -51,6 +51,8 @@ size_flags_vertical = 10
 layout_mode = 2
 size_flags_vertical = 6
 tooltip_text = "Enter the name you would like to try on here."
+focus_next = NodePath("../OptionButton")
+focus_previous = NodePath("../../Button")
 theme = ExtResource("2_qn1rc")
 theme_override_font_sizes/font_size = 46
 placeholder_text = "Enter your name here"
@@ -63,6 +65,8 @@ text = "Select your pronouns below"
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "Select the pronoun set you would like to try on from this list."
+focus_next = NodePath("../../Button")
+focus_previous = NodePath("../LineEdit")
 theme = ExtResource("2_qn1rc")
 item_count = 10
 popup/item_0/text = "They / Them"
@@ -90,6 +94,8 @@ popup/item_9/id = 9
 layout_mode = 2
 size_flags_vertical = 10
 tooltip_text = "Click here (once name and pronouns are selected) to go to the testing page."
+focus_next = NodePath("../VBoxContainer/LineEdit")
+focus_previous = NodePath("../VBoxContainer/OptionButton")
 theme = ExtResource("2_qn1rc")
 theme_override_font_sizes/font_size = 46
 text = "Try it out!"
@@ -106,5 +112,6 @@ text = "© ZoLo 2025 | Made with Godot 4"
 
 [connection signal="focus_entered" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_focus_entered"]
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_focus_entered"]
 [connection signal="item_selected" from="VBoxContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]
