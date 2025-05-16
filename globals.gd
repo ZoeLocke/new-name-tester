@@ -1,7 +1,7 @@
 extends Node
 
-var name_pick = ""
-var pronoun_pick = ""
+var name_pick = "Zoe"
+var pronoun_pick = 0
 #Pronouns dict - ID : {forms} 
 const pronouns = {
 	0 : {
@@ -12,7 +12,8 @@ const pronouns = {
 		"reflexive" : "themselves",
 		"common_cont" : "they're",
 		"include_s" : "",
-		"verb" : "are"
+		"verb" : "are",
+		"verb_cont" : "aren't"
 	},
 	1 : {
 		"subject" : "she",
@@ -22,7 +23,8 @@ const pronouns = {
 		"reflexive" : "herself",
 		"common_cont" : "she's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	2 : {
 		"subject" : "he",
@@ -32,7 +34,8 @@ const pronouns = {
 		"reflexive" : "himself",
 		"common_cont" : "he's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	3 : {
 		"subject" : "xi",
@@ -42,7 +45,8 @@ const pronouns = {
 		"reflexive" : "xirself",
 		"common_cont" : "xi's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	4 : {
 		"subject" : "fae",
@@ -52,7 +56,8 @@ const pronouns = {
 		"reflexive" : "faerself",
 		"common_cont" : "fae's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	5 : {
 		"subject" : "xe",
@@ -62,7 +67,8 @@ const pronouns = {
 		"reflexive" : "xemself",
 		"common_cont" : "xe's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	6 : {
 		"subject" : "ze",
@@ -72,7 +78,8 @@ const pronouns = {
 		"reflexive" : "zirself",
 		"common_cont" : "ze's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	7 : {
 		"subject" : "ey",
@@ -82,7 +89,8 @@ const pronouns = {
 		"reflexive" : "emself",
 		"common_cont" : "ey's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	8 : {
 		"subject" : "ve",
@@ -92,7 +100,8 @@ const pronouns = {
 		"reflexive" : "verself",
 		"common_cont" : "ve's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	},
 	9 : {
 		"subject" : "ne",
@@ -102,6 +111,7 @@ const pronouns = {
 		"reflexive" : "nemself",
 		"common_cont" : "ne's",
 		"include_s" : "s",
-		"verb" : "is"
+		"verb" : "is",
+		"verb_cont" : "isn't"
 	}
 }

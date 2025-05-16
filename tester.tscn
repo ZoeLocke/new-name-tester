@@ -28,12 +28,12 @@ alignment = 1
 [node name="Label" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(1388, 0)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 10
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
 theme_override_font_sizes/font_size = 62
 text = "Holding text"
 horizontal_alignment = 1
-vertical_alignment = 2
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
