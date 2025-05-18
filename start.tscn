@@ -51,7 +51,7 @@ size_flags_vertical = 10
 layout_mode = 2
 size_flags_vertical = 6
 tooltip_text = "Enter the name you would like to try on here."
-focus_next = NodePath("../OptionButton")
+focus_next = NodePath("../ItemList")
 focus_previous = NodePath("../../Button")
 theme = ExtResource("2_qn1rc")
 theme_override_font_sizes/font_size = 46
@@ -62,40 +62,35 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 46
 text = "Select your pronouns below"
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/VBoxContainer"]
+[node name="ItemList" type="ItemList" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "Select the pronoun set you would like to try on from this list."
 focus_next = NodePath("../../Button")
 focus_previous = NodePath("../LineEdit")
 theme = ExtResource("2_qn1rc")
+select_mode = 2
+allow_reselect = true
+allow_rmb_select = true
+auto_width = true
+auto_height = true
 item_count = 10
-popup/item_0/text = "They / Them"
-popup/item_0/id = 0
-popup/item_1/text = "She / Her"
-popup/item_1/id = 1
-popup/item_2/text = "He / Him"
-popup/item_2/id = 2
-popup/item_3/text = "Xi / Xir"
-popup/item_3/id = 3
-popup/item_4/text = "Fae / Faer"
-popup/item_4/id = 4
-popup/item_5/text = "Xe / Xem"
-popup/item_5/id = 5
-popup/item_6/text = "Ze / Zir"
-popup/item_6/id = 6
-popup/item_7/text = "Ey / Em"
-popup/item_7/id = 7
-popup/item_8/text = "Ve / Ver"
-popup/item_8/id = 8
-popup/item_9/text = "Ne / Nem"
-popup/item_9/id = 9
+item_0/text = "They / Them"
+item_1/text = "She / Her"
+item_2/text = "He / Him"
+item_3/text = "Xi / Xir"
+item_4/text = "Fae / Faer"
+item_5/text = "Xe / Xem"
+item_6/text = "Ze / Zir"
+item_7/text = "Ey / Em"
+item_8/text = "Ve / Ver"
+item_9/text = "Ne / Nem"
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
 tooltip_text = "Click here (once name and pronouns are selected) to go to the testing page."
 focus_next = NodePath("../VBoxContainer/LineEdit")
-focus_previous = NodePath("../VBoxContainer/OptionButton")
+focus_previous = NodePath("../VBoxContainer/ItemList")
 theme = ExtResource("2_qn1rc")
 theme_override_font_sizes/font_size = 46
 text = "Try it out!"
@@ -112,6 +107,5 @@ text = "© ZoLo 2025 | Made with Godot 4"
 
 [connection signal="focus_entered" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_focus_entered"]
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
-[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_focus_entered"]
-[connection signal="item_selected" from="VBoxContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="multi_selected" from="VBoxContainer/VBoxContainer/ItemList" to="." method="_on_item_list_multi_selected"]
 [connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]
