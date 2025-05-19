@@ -14,6 +14,7 @@ config/name="New Name Tester"
 run/main_scene="uid://523fkw2e3vsk"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0.184314, 0.184314, 0.184314, 1)
+boot_splash/image="uid://dcpyuicckq8fu"
 config/icon="res://icon.svg"
 
 [autoload]
