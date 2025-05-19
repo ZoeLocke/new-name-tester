@@ -23,7 +23,7 @@ var include_s
 # Verb = are (if her then "she is" so Verb would be "is", if they then "they are" so Verb would be "are")
 var verb
 # Verb contraction = aren't (if she then "isn't she" so Verb contraction would be isn't, if they then "aren't they" so Verb contraction would be "aren't")
-var verb_cont
+var verb_cont 
 
 func _ready():
 	strings = [
@@ -54,13 +54,15 @@ func _on_next_button_up() -> void:
 	$VBoxContainer/Label.text = strings[string_it]
 	
 func pronoun_random(request):
+	# Reset random seed for each call
 	randomize()
-	var pronoun_set = Globals.pronoun_pick.pick_random()
-	# pronoun_set 0 is they/them
+	# Select a pronoun set from those chosen at random
+	var i = randi_range(0, Globals.pronoun_pick.size()-1)
+	var pronoun_set = Globals.pronoun_pick[i]
+	# pronoun_set 0 is they/them, set they_switch accordingly
 	they_switch = true if pronoun_set == 0 and request not in ["include_s","verb","verb_cont"] else false
-	print(they_switch)
-	var response
 	
+	var response
 	#--Return the requested pronoun type based on the pronoun_set picked at random from those selected at the point that this function is called
 	if request == "subject": response = Globals.pronouns[pronoun_set]["subject"]
 	# Object = them

@@ -22,9 +22,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -618.0
-offset_top = -403.0
+offset_top = -468.0
 offset_right = 619.0
-offset_bottom = 383.0
+offset_bottom = 451.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -36,16 +36,13 @@ text = "Welcome to New Name Tester"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Spacer" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 46
-text = "Please enter your name and select your pronoun set"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 6
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -59,8 +56,10 @@ placeholder_text = "Enter your name here"
 
 [node name="Label3" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.376471, 0.376471, 1)
 theme_override_font_sizes/font_size = 46
-text = "Select your pronouns below"
+text = "Select your pronouns below (multi-select available)"
+horizontal_alignment = 1
 
 [node name="ItemList" type="ItemList" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -105,7 +104,5 @@ theme_override_colors/font_color = Color(0.550293, 0.550293, 0.550293, 1)
 theme_override_font_sizes/font_size = 24
 text = "© ZoLo 2025 | Made with Godot 4"
 
-[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_focus_entered"]
-[connection signal="text_changed" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
-[connection signal="multi_selected" from="VBoxContainer/VBoxContainer/ItemList" to="." method="_on_item_list_multi_selected"]
+[connection signal="item_activated" from="VBoxContainer/VBoxContainer/ItemList" to="." method="_on_item_list_item_activated"]
 [connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]

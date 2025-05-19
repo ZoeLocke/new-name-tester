@@ -1,7 +1,7 @@
 extends Node
 
 var name_pick = "Zoe"
-var pronoun_pick = [0,2,6]
+var pronoun_pick = [0, 2, 6, 5]
 #Pronouns dict - ID : {forms} 
 const pronouns = {
 	0 : {
